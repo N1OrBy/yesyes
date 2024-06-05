@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bármiről Szóló Weboldal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#welcome">Kezdőlap</a></li>
+                <!-- Dinamikusan generált navigációs linkek -->
+                <script>
+                    for (let i = 1; i <= 100; i++) {
+                        document.write('<li><a href="#section' + i + '">Téma ' + i + '</a></li>');
+                    }
+                </script>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome">
+            <h1>Üdvözlünk a Bármiről Szóló Weboldalon</h1>
+            <p>Ez az oldal 100 különböző témát tárgyal, hogy minél több információval gazdagodj!</p>
+        </section>
+        <!-- Dinamikusan generált szekciók -->
+        <script>
+            for (let i = 1; i <= 100; i++) {
+                document.write('<section id="section' + i + '">');
+                document.write('<h2>Téma ' + i + '</h2>');
+                document.write('<p>Ez a ' + i + '. szekció tartalma, amely egy érdekes témát tárgyal részletesen. Például: az első szekcióban lehet szó a környezetvédelemről, a második szekcióban az űrkutatásról, a harmadik szekcióban a történelmi eseményekről és így tovább. Minden szekció egy új, izgalmas téma részletes leírását tartalmazza.</p>');
+                document.write('</section>');
+            }
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bármiről Szóló Weboldal. Minden jog fenntartva.</p>
+    </footer>
+</body>
+</html>
